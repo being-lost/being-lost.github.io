@@ -1,0 +1,13 @@
+---
+title: picgo上传失败
+date: 2023-02-01 09:55:04
+tags:
+- picgo
+- 图床
+---
+
+### unable to verify the first certificate
+
+##### 解决
+
+steam++等加速器关掉就好了
