@@ -1,9 +1,13 @@
 ---
 title: sqlserver
-date: 2023-01-30 09:50:52
 tags:
- - sqlserver
- - 数据库
+  - sqlserver
+  - 数据库
+categories:
+  - 编程
+  - 工具
+  - sqlserver
+date: 2023-01-30 09:50:52
 ---
 
 # sqlserver设置自增

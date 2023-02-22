@@ -1,9 +1,13 @@
 ---
 title: docker命令
+tags:
+  - docker
+  - 语法
+categories:
+  - 编程
+  - 工具
+  - docker
 date: 2023-02-21 19:03:14
-tags: 
-- docker
-- 语法
 ---
 
 ### docker

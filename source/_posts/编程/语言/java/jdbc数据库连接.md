@@ -1,8 +1,12 @@
 ---
 title: jdbc数据库连接
+tags:
+  - 胶水代码
+categories:
+  - 编程
+  - 语言
+  - java
 date: 2023-02-21 19:03:14
-tags: 
-- 胶水代码
 ---
 
 数据源

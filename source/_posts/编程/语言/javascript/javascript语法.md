@@ -1,9 +1,13 @@
 ---
 title: javascript语法
-date: 2023-02-01 09:52:11
 tags:
-- 语法
-- javascript
+  - 语法
+  - javascript
+categories:
+  - 编程
+  - 语言
+  - javascript
+date: 2023-02-01 09:52:11
 ---
 
 ### onclick和addEventListener

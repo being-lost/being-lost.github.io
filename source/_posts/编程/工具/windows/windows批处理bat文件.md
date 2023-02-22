@@ -1,8 +1,12 @@
 ---
 title: windows批处理bat文件
+tags:
+  - 语法
+categories:
+  - 编程
+  - 工具
+  - windows
 date: 2023-02-21 19:03:14
-tags: 
-- 语法
 ---
 
 ### 语法

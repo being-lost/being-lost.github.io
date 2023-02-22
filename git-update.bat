@@ -1,3 +1,4 @@
 git add --all
 git commit -m "update"
-git push meeo hexo
+git push origin hexo
+cmd

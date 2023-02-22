@@ -1,9 +1,14 @@
 ---
 title: spring-jdbc
+tags:
+  - 框架
+  - java
+categories:
+  - 编程
+  - 语言
+  - java
+  - 框架
 date: 2023-02-21 19:03:14
-tags: 
-- 框架
-- java
 ---
 
 ### spring-jdbc

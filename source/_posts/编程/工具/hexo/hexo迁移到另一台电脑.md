@@ -1,9 +1,13 @@
 ---
 title: hexo迁移到另一台电脑
-date: 2023-02-21 09:53:32
 tags:
-- hexo
-- 实操教学
+  - hexo
+  - 实操教学
+categories:
+  - 编程
+  - 工具
+  - hexo
+date: 2023-02-21 09:53:32
 ---
 
 ### hexo迁移

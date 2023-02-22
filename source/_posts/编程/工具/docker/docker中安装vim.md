@@ -1,9 +1,13 @@
 ---
 title: docker中安装vim
-date: 2023-02-01 09:53:32
 tags:
-- docker
-- linux
+  - docker
+  - linux
+categories:
+  - 编程
+  - 工具
+  - docker
+date: 2023-02-01 09:53:32
 ---
 
 docker里的image有的干净到连vi、vim都没有。

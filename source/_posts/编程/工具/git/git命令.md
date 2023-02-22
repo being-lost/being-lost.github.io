@@ -1,9 +1,13 @@
 ---
 title: git命令
+tags:
+  - git
+  - 语法
+categories:
+  - 编程
+  - 工具
+  - git
 date: 2023-02-21 19:03:14
-tags: 
-- git
-- 语法
 ---
 
 ### 语法

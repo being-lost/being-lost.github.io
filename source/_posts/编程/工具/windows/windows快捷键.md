@@ -1,8 +1,12 @@
 ---
 title: windows快捷键
+tags:
+  - 快捷键
+categories:
+  - 编程
+  - 工具
+  - windows
 date: 2023-02-21 19:03:14
-tags: 
-- 快捷键
 ---
 
 ### windows键盘控制

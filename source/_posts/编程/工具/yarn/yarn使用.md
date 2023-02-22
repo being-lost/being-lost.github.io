@@ -1,8 +1,12 @@
 ---
 title: yarn使用
+tags:
+  - 包管理
+categories:
+  - 编程
+  - 工具
+  - yarn
 date: 2023-02-21 19:03:14
-tags: 
-- 包管理
 ---
 
 ### yarn

@@ -1,10 +1,14 @@
 ---
 title: 右键打开cmd
+tags:
+  - 便捷小技巧
+  - 实操教学
+  - windows
+categories:
+  - 编程
+  - 工具
+  - windows
 date: 2023-01-14 19:03:14
-tags: 
-- 便捷小技巧
-- 实操教学
-- windows
 ---
 
 ##### 打开注册表
