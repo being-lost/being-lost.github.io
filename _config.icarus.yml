@@ -117,9 +117,9 @@ widgets:
     -
         position: left
         type: profile
-        author: Your name
-        author_title: Your title
-        location: Your location
+        author: Meeo
+        author_title: Try to make my life better.
+        location: earth
         avatar: 
         avatar_rounded: false
         gravatar: 
