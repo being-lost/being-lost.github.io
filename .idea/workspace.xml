@@ -73,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675218148354</updated>
       <workItem from="1675218150155" duration="2775000" />
+      <workItem from="1677822673362" duration="21000" />
     </task>
     <servers />
   </component>
@@ -101,6 +102,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="595" y="280" key="MultipleFileMergeDialog" timestamp="1675218250991">

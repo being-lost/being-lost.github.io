@@ -41,5 +41,27 @@ echo hello
 cmd
 ```
 
+##### 查找文件：for
+
+```cmd
+for /r <目录> %<变量名> in (<文件名>) do <命令>
+```
+
+打印hello目录下的所有png文件
+
+- 为绝对路径
+
+```cmd
+for /r hello %img in (*.png) do @echo %img
+```
+
+删除hello目录下的所有开头为test的文件
+
+- 注意del后面的文件名最好用 `""` ，因为目录里可能出现空格
+
+```cmd
+for /r hello %testFile in (test*) do @del "@testFile"
+```
+
 
 
