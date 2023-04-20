@@ -1,5 +1,5 @@
 ---
-title: spring-jdbc
+title: spring-jdbc使用
 tags:
   - 框架
   - java
@@ -12,7 +12,7 @@ categories:
 date: 2023-02-21 19:03:14
 ---
 
-# spring-jdbc
+# spring-jdbc使用
 
 ##### 依赖
 
@@ -53,44 +53,66 @@ public void test{
 }
 ```
 
-### 查询 query
+### 查询 select
 
-基础的三种用法
+##### 返回单个字段
 
-- queryForObject
-- queryForMap
-- queryForList
-
-前两个如果没有结果，会报错
-
-queryForList为空，size=0
-
-##### 示例
+queryForObject
 
 ```java
-Integer integer = jdbcTemplate.queryForObject("select count(*) from user where id = ?", Integer.class, 1);             
+jdbcTemplate.queryForObject("select count(*) from user where id = ?", Integer.class, 1); 
 ```
+
+##### 返回map
+
+queryForMap
 
 ```java
-Map<String, Object> map = jdbcTemplate.queryForMap("select * from user where id = ?", 1);
+jdbcTemplate.queryForMap("select * from user where id = ?", 1);
 ```
+
+##### 返回List，单个字段
+
+queryForList
 
 ```java
-List<String> list = jdbcTemplate.queryForList("select name from user where id < ?", String.class, 5);
+jdbcTemplate.queryForList("select name from user where id < ?", String.class, 5);
 ```
 
-##### RowMapper 映射字段
+##### 返回List，Map对象
+
+queryForList
 
 ```java
-@Override
-public Map<String, Object> mapRow(ResultSet rs, int rowNum) throws SQLException {
-    Map<String, Object> map = new HashMap<>();
-    map.put("name",rs.getString("name"));
-    return map;
-}
+//不指定类型，默认返回map
+jdbcTemplate.queryForList("select * from user where id < ?", 5);
 ```
 
-### 批量
+##### 返回对象（需要手动映射）
+
+queryForObject
+
+```java
+RowMapper<User> userMapper = (rs, rowNum) -> {
+    log("rowNum:{}", rowNum);
+    User user = new User();
+    user.setId(rs.getInt("id"));
+    user.setName(rs.getString("name"));
+    return user;
+};
+jdbcTemplate.queryForList("select * from user where id < ?",userMapper, 5);
+```
+
+##### 返回List<对象>（需要手动映射）
+
+query
+
+```java
+//同上
+jdbcTemplate.query("select * from user where id < ?",userMapper, 5);
+```
+
+### in参数的处理
 
 in中需要多个参数，就要拼多少个`?`
 
@@ -115,3 +137,39 @@ String sql = String.format(sqlPre,getInParam(list.size()));
 jdbcTemplate.queryForList(sql, String.class, list.toArray());
 ```
 
+## 踩坑
+
+##### 当参数有数组类型时
+
+需要把所有参数合并到一个数组中
+
+```java
+String name = "";
+Object[] age = {1,2,3};
+
+//错误示范，报错：SQLServerException: The conversion from UNKNOWN to UNKNOWN is unsupported.
+jdbcTemplate.query(sql,name,age);
+
+//正确示范
+List<String> params = new ArrayList<>();
+params.add(form_no);
+params.addAll(Arrays.asList(worker));
+jdbcTemplate.update(sql,params.toArray());
+```
+
+
+
+## 小计
+
+报错顺序：
+
+- 没查到数据：EmptyResult
+- 查到数据：
+  - 查一条数据，返回值有多条：IncorrectResultSize
+  - 查一个字段，返回值有多个：IncorrectResultSetColumnCount
+
+方法中的参数为elementType的，返回字段只能有一个
+
+自己写的对象必须写RowMapper手动绑定（辣鸡）
+
+返回list不会为null

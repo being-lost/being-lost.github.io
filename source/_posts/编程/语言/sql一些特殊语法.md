@@ -93,6 +93,14 @@ select '-' + id from user for xml path('hello')
 </hello>
 ```
 
+再去掉hello
+
+```sql
+select '-' + id from user for xml path('')
+--
+-1-2-3-4-5-6
+```
+
 ##### stuff()
 
 类似于replace，替换字符串
@@ -111,38 +119,70 @@ select stuff('你好',1,1,'hello') from user
 hello好
 ```
 
+**于是把 `for xml path()` 和 `stuff()` 融合一下**
 
+就能把1前面的符号去掉了（替换成空字符串）
+
+只能用子查询，还要去重
+
+```sql
+--注意拼接的字段，需要转换成字符串类型
+select distinct stuff(
+    (select '-' + id from user for xml path('')),
+    1,1,''    
+) 
+from user
+--
+1-2-3-4-5-6
+```
 
 ##### with as
 
+##### rank和row_number
 
+相同点：
 
-##### rank() over(order by)
+- 语法相同
+- 都会生成一个序号。
 
-可以用来增加一个序号列
+不同点：
+
+- rank中order by的字段如果相同，生成的序号相同，并且会跳过一些序号
+
+  比如，aabb
+
+  ```sql
+  --rank
+  1 a
+  1 a
+  3 b
+  3 b
+  --row_number
+  1 a
+  2 a
+  3 b
+  4 b
+  ```
+
+使用如下
 
 > sqlserver
 
 ```sql
 select 
-	rank() over(order by id desc) as no,
+	--此处指定了根据id排序，也可以不指定，用 order by (select 0) desc
+	--但是，根据rank的特性，所有select 0的值都相等，所以最后结果也全都是1
+	row_number() over(order by id desc) as no,	
 	name
-from
-	user	
+from user	
 --
 1	zhangsan
 2	lisi
 ```
 
-如果只有单个字段，可以用子查询
+##### 用row_number做分页
 
-```sql
-select 
-	rank() over(order by temp.name) as no,
-	temp.name
-from
-	(select name from user) temp
-```
+
 
 ##### while 循环
 

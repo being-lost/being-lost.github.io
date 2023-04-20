@@ -24,7 +24,7 @@ hello world
 map.computeIfAbsent(key,e->new String());
 //等同于
 if(map.get(key)==null){
-	String value = new String()
+	String value = new String();
     map.put(value);
     return value;
 }
@@ -39,9 +39,9 @@ if(map.get(key)==null){
 ```java
 map.putIfAbsent(key,new String())
 //等同于
-String value = map.get(key)
+String value = map.get(key);
 if(value == null){
-	value = new String()
+	value = new String();
     map.put(value);
     return null;
 }else{

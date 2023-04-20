@@ -1,5 +1,5 @@
 ---
-title: 正则表达式
+title: regex正则表达式
 categories:
   - 编程
   - 语言
@@ -11,7 +11,9 @@ hello world
 
 ---
 
-### 正则表达式
+### 语法
+
+---
 
 ^：以xxx开头
 
@@ -100,5 +102,33 @@ sjdflkajfhello //不匹配
 hi hello world //匹配
 helloasjdklf //不匹配
 world helloasjdklf //不匹配
+```
+
+
+
+
+
+---
+
+### 实战案例
+
+##### 已知变量名，获取该变量的所有值
+
+想要获取所有sql语句
+
+```java
+String sql = "select 1";
+sql = "select count(1) "+
+    " from user";
+```
+
+开头都是 `sql =` 
+
+结尾都是 `";`
+
+中间不能出现分号，并且字符数不限制 `[^;]{0,}`
+
+```
+(sql =)[^;]{0,}(";)
 ```
 

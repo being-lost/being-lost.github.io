@@ -1,5 +1,5 @@
 ---
-title: windows批处理bat文件
+title: cmd、bat语法
 tags:
   - 语法
 categories:
