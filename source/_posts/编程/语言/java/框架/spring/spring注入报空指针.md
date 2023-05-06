@@ -19,10 +19,10 @@ hello world
 
 ~~~java
 public class Test{
-
+	//如果存在一个别的static修饰的变量
     private static String other = new String();
 
-    //空指针，无法注入
+    //会spring导致无法注入，造成空指针
     @Autowired
     private User user ;
 
@@ -31,7 +31,6 @@ public class Test{
     private static User user ;
     
     //解决2，直接从容器中拿
-    @Autowired
     private User user = SpringUtil.getBean(User.class);    
 }
 ~~~
