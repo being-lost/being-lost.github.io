@@ -61,7 +61,7 @@
 </ul>
 <h3 id="方法（方法名暂定）"><a href="#方法（方法名暂定）" class="headerlink" title="方法（方法名暂定）"></a>方法（方法名暂定）</h3><h5 id="if-then"><a href="#if-then" class="headerlink" title="if_then"></a>if_then</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(T t:list1)&#123;</span><br><span class="line">	<span class="keyword">for</span>(R r:list2)&#123;</span><br><span class="line">        <span class="keyword">if</span>()&#123;</span><br><span class="line">            <span class="comment">//xxx</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-20T12:47:58.000Z" title="2023/3/20 20:47:58">2023-03-20</time>发表</span><span class="level-item"><time dateTime="2023-05-04T09:51:35.601Z" title="2023/5/4 17:51:35">2023-05-04</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span> / </span><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B/%E8%AF%AD%E8%A8%80/">语言</a><span> / </span><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B/%E8%AF%AD%E8%A8%80/java/">java</a></span><span class="level-item">9 分钟读完 (大约1419个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/20/%E7%BC%96%E7%A8%8B/%E8%AF%AD%E8%A8%80/java/javaSE%E5%9F%BA%E7%A1%80/">javaSE基础</a></p><div class="content"><p>hello world</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-20T12:47:58.000Z" title="2023/3/20 20:47:58">2023-03-20</time>发表</span><span class="level-item"><time dateTime="2023-05-09T05:45:16.298Z" title="2023/5/9 13:45:16">2023-05-09</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span> / </span><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B/%E8%AF%AD%E8%A8%80/">语言</a><span> / </span><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B/%E8%AF%AD%E8%A8%80/java/">java</a></span><span class="level-item">14 分钟读完 (大约2031个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/20/%E7%BC%96%E7%A8%8B/%E8%AF%AD%E8%A8%80/java/javaSE%E5%9F%BA%E7%A1%80/">javaSE基础</a></p><div class="content"><p>hello world</p>
 <hr>
 <p>一个重要的观念：</p>
 <p><strong>不要把原生类库奉为圭臬</strong>，</p>
@@ -139,6 +139,66 @@
 <p>原理：int有4个字节，byte只有1个，所以int转成byte，<strong>需要去掉左边的</strong>3个字节</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//0~127无变化</span></span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">127</span>;</span><br><span class="line"><span class="type">byte</span> <span class="variable">b</span> <span class="operator">=</span> (<span class="type">byte</span>)a; </span><br><span class="line"></span><br><span class="line"><span class="comment">//int[128,255]，对应byte[-128,-1]</span></span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">255</span>;</span><br><span class="line"><span class="type">byte</span> <span class="variable">b</span> <span class="operator">=</span> (<span class="type">byte</span>)a; <span class="comment">//-1</span></span><br></pre></td></tr></table></figure></li>
 </ul>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>本质：数据类型的参数化</p>
+<h5 id="解决了什么问题"><a href="#解决了什么问题" class="headerlink" title="解决了什么问题"></a>解决了什么问题</h5><p>类型检查</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">list.add(<span class="number">123</span>);	<span class="comment">//编译不通过</span></span><br></pre></td></tr></table></figure>
+
+<p>方便类型转换，而且避免ClassCastException</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">list.add(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">obj</span> <span class="operator">=</span> (String)list.get(<span class="number">0</span>);<span class="comment">//如果没有泛型，就要手动转换</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h5><p>java程序执行的过程：</p>
+<p>源码.java——编译器——》》字节码.class——虚拟机——》》内存中运行</p>
+<p>泛型编译成.class字节码的时候，实际上还是object，而且<code>ArrayList&lt;T&gt;</code>内部的也是<code>object[]</code>。</p>
+<p>所以泛型的写法，<strong>实际上是编译器实现的</strong>，也叫做<strong>泛型擦去</strong>。</p>
+<p>编译器允许这种泛型的写法，并且保存数据类型，自动进行类型转换，<strong>所以也得益于多态</strong></p>
+<blockquote>
+<p>所以 <code>int</code> 和 <code>Integer</code>的自动装箱、拆箱，应该也是编译器帮忙调用<code>Integer.valueOf()</code></p>
+</blockquote>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h5 id="泛型对象"><a href="#泛型对象" class="headerlink" title="泛型对象"></a>泛型对象</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br></pre></td></tr></table></figure>
+
+<h5 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Result</span>&lt;T&gt;&#123;</span><br><span class="line">	<span class="keyword">private</span> T data;</span><br><span class="line">	<span class="keyword">public</span> T <span class="title function_">getData</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;	</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setData</span><span class="params">(T data)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.data=data;</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//多泛型类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Result</span>&lt;T,R&gt;&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h5><p>和上面的<strong>泛型类里面的方法</strong>不同，</p>
+<p>下面这种写法<strong>可以在非泛型类中</strong>定义，</p>
+<p>区别在于，有没有类型转换 <code>&lt;T&gt;</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;T&gt; T <span class="title function_">get</span><span class="params">(List&lt;T&gt; list)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> list.get(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//静态</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T, R&gt; ForEachUtil&lt;T, R&gt; <span class="title function_">getInstance</span><span class="params">(List&lt;T&gt; list1, List&lt;R&gt; list2)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ForEachUtil2</span>&lt;&gt;(list1, list2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h4><p>不能用基础类型</p>
+<h5 id="简单泛型"><a href="#简单泛型" class="headerlink" title="简单泛型"></a>简单泛型</h5><ul>
+<li>必须左右两边类型一致</li>
+<li>可以add自己和子类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Number&gt; list1 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();<span class="comment">//报错</span></span><br><span class="line">List&lt;Integer&gt; list2 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;();<span class="comment">//报错</span></span><br><span class="line"></span><br><span class="line">List&lt;Number&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Number&gt;();</span><br><span class="line">list.add(<span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+
+<h5 id=""><a href="#" class="headerlink" title="?"></a><code>?</code></h5><ul>
+<li>右边可以接收任何类型，所以一般是用作方法的参数，来接收List的泛型对象</li>
+<li>只能添加null</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;?&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">list.add(<span class="literal">null</span>);</span><br><span class="line">list.add(<span class="number">1</span>);<span class="comment">//报错</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="extend-T"><a href="#extend-T" class="headerlink" title="? extend T"></a><code>? extend T</code></h5><ul>
+<li>右边的必须为T本身，或者T的子类</li>
+<li>只能add null</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">List&lt;? <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Object&gt;();<span class="comment">//报错</span></span><br><span class="line"><span class="comment">//只能添加null</span></span><br><span class="line">List&lt;? <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; list1 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">list1.add(<span class="literal">null</span>);</span><br><span class="line">list1.add(<span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">3</span>));<span class="comment">//报错</span></span><br><span class="line"><span class="comment">//如果非要添加</span></span><br><span class="line">List&lt;Integer&gt; list2 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">list2.add(<span class="number">3</span>);</span><br><span class="line">List&lt;? <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; list3 = list2;</span><br><span class="line">list3.get(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="super-T"><a href="#super-T" class="headerlink" title="? super T"></a><code>? super T</code></h5><ul>
+<li><p>右边的必须为T本身，或者T的父类</p>
+</li>
+<li><p>可以add左边T的子类</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;? <span class="built_in">super</span> Number&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();<span class="comment">//报错，类型错误</span></span><br><span class="line">List&lt;? <span class="built_in">super</span> Number&gt; list1 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Object&gt;();</span><br><span class="line">list1.add(<span class="literal">null</span>);</span><br><span class="line">list1.add(<span class="keyword">new</span> <span class="title class_">Object</span>());<span class="comment">//报错</span></span><br><span class="line">list1.add(<span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+
+<h5 id="List-lt-gt-和-List-lt-Object-gt"><a href="#List-lt-gt-和-List-lt-Object-gt" class="headerlink" title="List&lt;?&gt; 和 List&lt;Object&gt;"></a><code>List&lt;?&gt;</code> 和 <code>List&lt;Object&gt;</code></h5><p>答案就很明显了</p>
+<ul>
+<li><p>右边的属于普通泛型</p>
+</li>
+<li><p>左边的只能添加null</p>
+</li>
+</ul>
 <h3 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h3><h5 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h5><p>让磁盘和内存数据的交互</p>
 <p>因为程序在内存中运行，所以</p>
 <ul>
@@ -179,7 +239,8 @@
 <p>因为多态，导致根本不知道传过来的对象是不是带buffered的，</p>
 <p>如果是自己写的话，就随意。</p>
 </blockquote>
-<h3 id="集合类"><a href="#集合类" class="headerlink" title="集合类"></a>集合类</h3><h3 id="并发、线程类"><a href="#并发、线程类" class="headerlink" title="并发、线程类"></a>并发、线程类</h3><h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><p>线程池需要考虑的问题：</p>
+<h3 id="集合类"><a href="#集合类" class="headerlink" title="集合类"></a>集合类</h3><p>todo</p>
+<h3 id="并发、线程类"><a href="#并发、线程类" class="headerlink" title="并发、线程类"></a>并发、线程类</h3><h4 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h4><p>线程池需要考虑的问题：</p>
 <ul>
 <li>最少保留几个线程</li>
 <li>最多存放几个线程</li>
