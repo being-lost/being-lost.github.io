@@ -79,6 +79,158 @@ java分为**自动转换**和**强制转换**
 
 
 
+### 泛型
+
+本质：数据类型的参数化
+
+##### 解决了什么问题
+
+类型检查
+
+```java
+List<String> list = new ArrayList<>();
+list.add("hello");
+list.add(123);	//编译不通过
+```
+
+方便类型转换，而且避免ClassCastException
+
+```java
+List list = new ArrayList();
+list.add("hello");
+String obj = (String)list.get(0);//如果没有泛型，就要手动转换
+```
+
+##### 原理
+
+java程序执行的过程：
+
+源码.java——编译器——》》字节码.class——虚拟机——》》内存中运行
+
+泛型编译成.class字节码的时候，实际上还是object，而且`ArrayList<T>`内部的也是`object[]`。
+
+所以泛型的写法，**实际上是编译器实现的**，也叫做**泛型擦去**。
+
+编译器允许这种泛型的写法，并且保存数据类型，自动进行类型转换，**所以也得益于多态**
+
+> 所以 `int` 和 `Integer`的自动装箱、拆箱，应该也是编译器帮忙调用`Integer.valueOf()`
+
+#### 使用
+
+##### 泛型对象
+
+```java
+List<Integer> list = new ArrayList<Integer>();
+```
+
+##### 泛型类
+
+```java
+class Result<T>{
+	private T data;
+	public T getData(){
+        return data;
+    }	
+    public void setData(T data){
+        this.data=data;
+    }	
+}
+
+//多泛型类
+class Result<T,R>{}
+```
+
+##### 泛型方法
+
+和上面的**泛型类里面的方法**不同，
+
+下面这种写法**可以在非泛型类中**定义，
+
+区别在于，有没有类型转换 `<T>`
+
+```java
+public <T> T get(List<T> list) {
+    return list.get(0);
+}
+
+//静态
+public static <T, R> ForEachUtil<T, R> getInstance(List<T> list1, List<R> list2) {
+    return new ForEachUtil2<>(list1, list2);
+}
+```
+
+
+
+#### 限制
+
+不能用基础类型
+
+##### 简单泛型
+
+- 必须左右两边类型一致
+- 可以add自己和子类
+
+```java
+List<Number> list1 = new ArrayList<Integer>();//报错
+List<Integer> list2 = new ArrayList<String>();//报错
+
+List<Number> list = new ArrayList<Number>();
+list.add(new Integer(3));
+```
+
+##### `?`
+
+- 右边可以接收任何类型，所以一般是用作方法的参数，来接收List的泛型对象
+- 只能添加null
+
+```java
+List<?> list = new ArrayList<Integer>();
+list.add(null);
+list.add(1);//报错
+```
+
+##### `? extend T` 
+
+- 右边的必须为T本身，或者T的子类
+- 只能add null
+
+```java
+List<? extends Number> list = new ArrayList<Object>();//报错
+//只能添加null
+List<? extends Number> list1 = new ArrayList<Integer>();
+list1.add(null);
+list1.add(new Integer(3));//报错
+//如果非要添加
+List<Integer> list2 = new ArrayList<Integer>();
+list2.add(3);
+List<? extends Number> list3 = list2;
+list3.get(0);
+```
+
+##### `? super T` 
+
+- 右边的必须为T本身，或者T的父类
+
+- 可以add左边T的子类
+
+```java
+List<? super Number> list = new ArrayList<Integer>();//报错，类型错误
+List<? super Number> list1 = new ArrayList<Object>();
+list1.add(null);
+list1.add(new Object());//报错
+list1.add(new Integer(3));
+```
+
+##### `List<?>` 和 `List<Object>`
+
+答案就很明显了
+
+- 右边的属于普通泛型
+
+- 左边的只能添加null
+
+
+
 
 ### IO流
 
@@ -151,7 +303,7 @@ java分为**自动转换**和**强制转换**
 
 ### 集合类
 
-
+todo
 
 ### 并发、线程类
 
