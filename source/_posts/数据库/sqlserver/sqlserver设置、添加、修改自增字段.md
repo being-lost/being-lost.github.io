@@ -1,5 +1,5 @@
 ---
-title: sqlserver
+title: sqlserver设置、添加、修改自增字段
 tags:
   - sqlserver
   - 数据库
@@ -9,10 +9,13 @@ categories:
   - sqlserver
 date: 2023-01-30 09:50:52
 ---
+hello world
 
-# sqlserver设置自增
+---
 
-### 已经创建了表，如何设置自增
+[toc]
+
+
 
 > 以下为模板，注意占位符${}和注释--处，替换即可
 >
@@ -20,31 +23,57 @@ date: 2023-01-30 09:50:52
 >
 > ${columnName}：自增字段
 
+### 建表时，设置自增
+
+字段后面加上 `identity(<起始值>,<每次自增多少>)`
+
+```sql
+CREATE TABLE ${tableName}(
+    ${colomnName} int NOT NULL IDENTITY (1, 1),  
+    --other columns
+)  ON [PRIMARY];
+```
+
+自增的字段==允许手动insert==，甚至可以insert重复值
+
+```sql
+SET IDENTITY_INSERT ${tableName} ON;--设置允许手动insert
+insert into ${tableName}(${colomnName}) values(111);
+insert into ${tableName}(${colomnName}) values(111);--可重复
+SET IDENTITY_INSERT ${tableName} OFF;--关闭，这一步别忘了
+```
+
+但是==不允许update==
+
+### 已经创建了表，如何设置自增
+
+sqlserver**不允许**把现有的字段设置成自增
+
 ##### 删掉表，重建（可保留数据）
 
 ```sql
---重建新表
+--创建一张新表，带自增的
 CREATE TABLE dbo.Tmp_${tableName}(
     ${colomnName} int NOT NULL IDENTITY (1, 1),  
     --other columns
 )  ON [PRIMARY];
-SET IDENTITY_INSERT dbo.Tmp_${tableName} ON;
 --将原表的数据转移到新表
+SET IDENTITY_INSERT dbo.Tmp_${tableName} ON;
 IF EXISTS(SELECT * FROM dbo.${tableName})
-	INSERT INTO dbo.Tmp_${tableName} (${columnName}, --other columns which need to save data
-	) SELECT ${columnName}, --other columns which need to save data
+	INSERT INTO dbo.Tmp_${tableName} (${columnName}, --other columns that need to save data
+	) SELECT ${columnName}, --other columns that need to save data
     FROM dbo.${tableName} TABLOCKX;
 SET IDENTITY_INSERT dbo.Tmp_${tableName} OFF;
---删掉
+--删掉旧表
 DROP TABLE dbo.${tableName};
---改名
+--新表改名
 Exec sp_rename 'Tmp_${tableName}', '${tableName}';
 ```
 
 ##### 删掉原来的字段
 
-- 数据不保留
-- 如果字段是主键会报错
+- 数据不保留，因为自增列不能update
+- ==如果该字段是主键会报错==
 
 ```sql
 --插入新列

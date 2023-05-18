@@ -6,10 +6,16 @@ categories:
   - 编程
   - 工具
   - windows
-date: 2023-02-21 19:03:14
+date: 2023-02-21 19:03:00
 ---
 
-### 语法
+hello world
+
+---
+
+[toc]
+
+### 基础语法
 
 ##### 注释：rem、@rem、::
 
@@ -25,20 +31,22 @@ rem 这里是注释
 echo hello
 ```
 
-##### bat文件执行完，cmd窗口不关闭：pause、cmd
-
-pause 按任意键直接关闭，不能继续输入命令
-
-```cmd
-echo hello
-pause
-```
-
-cmd 可以接着输入命令
+##### bat文件执行完，cmd窗口不关闭：cmd
 
 ```cmd
 echo hello
 cmd
+```
+
+---
+
+### 一些简单的功能
+
+##### 接收键盘输入信息：set
+
+```cmd
+set /p msg= my name is : 
+echo your name is %msg%
 ```
 
 ##### 查找文件：for

@@ -11,8 +11,12 @@
             "id": "5d0f4b557768058b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_posts/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "socket",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_posts/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_posts/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,15 +124,16 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_posts/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -140,7 +147,32 @@
   },
   "active": "5d0f4b557768058b",
   "lastOpenFiles": [
+    "_drafts/java-socket.md",
     "_posts/总览.md",
+    "_posts/数据库/sqlserver",
+    "_posts/数据库/新建文件夹",
+    "_posts/cmd、bat语法.md",
+    "_posts/java/try-with-resource自动关闭流.md",
+    "_posts/工具/typora快捷键.md",
+    "_drafts/其他/编程/语言/java/java-socket.md",
+    "_posts/工具",
+    "_posts/新建文件夹",
+    "_posts/java",
+    "_drafts/socket是什么.md",
+    "_posts/数据库",
+    "_posts/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
+    "_drafts/typora自定义快捷键.md",
+    "_drafts/ttttttttt.md",
+    "_drafts/草稿.md",
+    "_drafts/tttttttttt.md",
+    "_drafts/draft.md",
+    "_drafts/新建文本文档.txt",
+    "_drafts/testbat.md",
+    "_drafts/test.bat",
+    "_drafts/test.txt",
+    "_drafts/其他/编程/工具/picgo/picgo上传失败.md",
+    "_drafts/github访问加速.md",
+    "_drafts/Untitled.md",
     "_posts/编程/工具/docker/docker命令.md",
     "_drafts/生活感悟/给生活留一些深度思考的时间.md",
     "_drafts/生活感悟/有些事还是看别人做更舒服.md",
@@ -150,31 +182,6 @@
     "_drafts/编程/语言/java/轮子/循环模型-ForEachUtil.md",
     "_drafts/编程/语言/java/轮子/个人工具类-MeoUtil.md",
     "_drafts/编程/语言/java/框架/springboot/springboot启动报错.md",
-    "_drafts/编程/语言/java/框架/springboot/ConfigurationProperties和Value注解.md",
-    "_drafts/编程/语言/java/框架/spring/spring的一些功能接口.md",
-    "_drafts/编程/语言/java/框架/spring/spring注入报空指针.md",
-    "_drafts/编程/语言/java/框架/spring/spring-jdbc使用.md",
-    "_drafts/编程/语言/java/框架/mybatis-plus/mybatis-plus分页.md",
-    "_drafts/编程/语言/java/框架/springboot",
-    "_drafts/编程/语言/java/框架/spring",
-    "_drafts/编程/语言/java/框架/mybatis-plus",
-    "_drafts/编程/语言/javascript/javascript语法.md",
-    "_drafts/编程/语言/java/轮子",
-    "_drafts/编程/语言/java/胶水代码.md",
-    "_drafts/编程/语言/java/框架",
-    "_drafts/编程/语言/java/多条件过滤，将一个list拆分成多个list.md",
-    "_drafts/编程/语言/java/stream使用.md",
-    "_drafts/编程/语言/java/PropertyDescriptor使用.md",
-    "_drafts/编程/语言/java/java的math包.md",
-    "_drafts/编程/语言/java/java测试mock.md",
-    "_drafts/编程/语言/java/java正则表达式.md",
-    "_drafts/编程/语言/java/java发邮件.md",
-    "_drafts/编程/语言/java/java函数式编程.md",
-    "_drafts/编程/语言/java/javaSE基础.md",
-    "_drafts/编程/语言/java/java-socket.md",
-    "_drafts/编程/语言/javascript",
-    "_drafts/编程/语言/java",
-    "_drafts/编程/工具/yarn",
-    "_drafts/编程/工具/windows"
+    "_drafts/编程/语言/java/框架/springboot/ConfigurationProperties和Value注解.md"
   ]
 }
