@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "957585c1b394ee0f",
+        "id": "2b67f64c8bfa8302",
         "type": "tabs",
         "children": [
           {
-            "id": "5d0f4b557768058b",
+            "id": "c8336acfa252fc79",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/访问网站加速的几种方式.md",
+                "file": "_posts/总览.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/访问网站加速的几种方式.md",
+                "file": "_posts/总览.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/访问网站加速的几种方式.md",
+                "file": "_posts/总览.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/访问网站加速的几种方式.md"
+                "file": "_posts/总览.md"
               }
             }
           }
@@ -137,29 +137,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "5d0f4b557768058b",
+  "active": "77e782562f5c570c",
   "lastOpenFiles": [
+    "_posts/todo",
+    "_posts/todo/访问网站加速的几种方式.md",
     "_posts/dns.md",
-    "_drafts/访问网站加速的几种方式.md",
-    "_drafts/github访问加速.md",
-    "_posts/markdown语法.md",
+    "_posts/todo/github访问加速.md",
+    "_posts/todo/markdown语法.md",
     "_drafts/test-hexo.md",
     "_posts/总览.md",
     "_drafts/项目开发流程.md",
-    "_drafts/java队列queue接口.md",
+    "_posts/todo/java队列queue接口.md",
     "_posts/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
-    "_drafts/java-socket.md",
+    "_posts/todo/java-socket.md",
     "_posts/数据库/sqlserver",
     "_posts/数据库/新建文件夹",
-    "_posts/cmd、bat语法.md",
+    "_posts/todo/cmd、bat语法.md",
     "_posts/java/try-with-resource自动关闭流.md",
     "_posts/工具/typora快捷键.md",
     "_drafts/其他/编程/语言/java/java-socket.md",
@@ -181,7 +182,6 @@
     "_drafts/Untitled.md",
     "_posts/编程/工具/docker/docker命令.md",
     "_drafts/生活感悟/给生活留一些深度思考的时间.md",
-    "_drafts/生活感悟/有些事还是看别人做更舒服.md",
     "_drafts/生活感悟"
   ]
 }

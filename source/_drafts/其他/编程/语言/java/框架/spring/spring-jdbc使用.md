@@ -38,12 +38,19 @@ date: 2023-02-21 19:03:14
 
 ```java
 public void test{
-	DruidDataSource dataSource = new DruidDataSource();
+    String url = "jdbc:sqlserver://192.168.5.207:1433;DatabaseName=test";
+    String username = "sa";
+    String password = "123456";
+    DruidDataSource dataSource = new DruidDataSource();
+    dataSource.setUrl(url);
+    dataSource.setUsername(username);
+    dataSource.setPassword(password);
+    
+    JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
     //低版本的为 DataSourceTransactionManager
 	JdbcTransactionManager manager = new JdbcTransactionManager(dataSource);
+    
     TransactionStatus status = manager.getTransaction(new DefaultTransactionDefinition());
-
-	JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 	try{
 		jdbcTemplate.update("update usr set name = ? where id = ?", "hello", 1);
         manager.commit(status);
