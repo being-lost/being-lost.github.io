@@ -12,6 +12,10 @@ hello world
 
 ---
 
+[toc]
+
+
+
 一个重要的观念：
 
 **不要把原生类库奉为圭臬**，
@@ -56,12 +60,18 @@ java Helloworld
 
 java分为**自动转换**和**强制转换**
 
-自动转换：不需要额外操作
+**自动转换**：不需要额外操作
 
-- 小的转成大的，比如byte自动转为int
-- 整形转为浮点，比如long转成float
+```java
+//小的转成大的，比如byte自动转为int
+byte a = 1;
+int b = a;
+//整形转为浮点，比如long转成float
+long a = 1L;
+float b = a;
+```
 
-强制转换：
+**强制转换**：
 
 - 大的转成小的，会导致精度缺失
 
@@ -77,7 +87,15 @@ java分为**自动转换**和**强制转换**
   byte b = (byte)a; //-1
   ```
 
+#### 特殊类型
 
+##### Bigdecimal
+
+`double`计算时，会有精度的问题，导致结果不准。
+
+所以有了`Bigdecimal`
+
+尽量用`Bigdecimal.valueOf()` ，而不是`new Bigdecimal()` 
 
 ### 泛型
 
