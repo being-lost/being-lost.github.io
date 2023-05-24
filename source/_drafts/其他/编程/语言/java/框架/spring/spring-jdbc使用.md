@@ -28,9 +28,9 @@ date: 2023-02-21 19:03:14
 
 ```xml
 <dependency>
-    <groupId>com.alibaba</groupId>
-    <artifactId>druid</artifactId>
-    <version>1.2.11</version>
+    <groupId>com.zaxxer</groupId>
+    <artifactId>HikariCP</artifactId>
+    <version>${hikaricp.version}</version>
 </dependency>
 ```
 
@@ -41,8 +41,8 @@ public void test{
     String url = "jdbc:sqlserver://192.168.5.207:1433;DatabaseName=test";
     String username = "sa";
     String password = "123456";
-    DruidDataSource dataSource = new DruidDataSource();
-    dataSource.setUrl(url);
+    HikariDataSource dataSource = new HikariDataSource();
+    dataSource.setJdbcUrl(url);
     dataSource.setUsername(username);
     dataSource.setPassword(password);
     
