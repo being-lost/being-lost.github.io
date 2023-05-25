@@ -24,7 +24,7 @@ String input = "drop table user";
 Matcher matcher = pattern.matcher(input);
 //打印所有匹配的字符
 while (matcher.find()) {
-    String matchStr = Matcher.group();
+    String matchStr = matcher.group();
     System.out.println(matchStr);
 }
 ```
