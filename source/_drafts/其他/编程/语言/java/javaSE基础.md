@@ -91,11 +91,7 @@ float b = a;
 
 ##### Bigdecimal
 
-`double`计算时，会有精度的问题，导致结果不准。
 
-所以有了`Bigdecimal`
-
-尽量用`Bigdecimal.valueOf()` ，而不是`new Bigdecimal()` 
 
 ### 泛型
 
