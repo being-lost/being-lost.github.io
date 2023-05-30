@@ -1,7 +1,7 @@
 ---
 title: typora快捷键
 categories:
-  - null
+  - 工具
 date: 2023-05-18 10:42:44
 tags:
 ---
@@ -45,6 +45,8 @@ Copy	Ctrl+C
 找到`KeyBingding`，修改保存
 
 > key值为功能名，可以把typora调成英文，找到对应的英文
+
+以下为个人常用的快捷键，方便移植
 
 ```json
 "keyBinding": {

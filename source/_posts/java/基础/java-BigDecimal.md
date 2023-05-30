@@ -1,7 +1,8 @@
 ---
 title: java-BigDecimal
 categories:
-  - null
+  - java
+  - 基础
 date: 2023-05-26 13:19:32
 tags:
 ---

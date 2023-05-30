@@ -1,12 +1,11 @@
 ---
 title: socket编程
 categories:
-  - 编程
-  - 语言
   - java
+  - 原生库
+  - net包
 date: 2023-03-20 20:34:56
 tags:
-
 ---
 
 hello world

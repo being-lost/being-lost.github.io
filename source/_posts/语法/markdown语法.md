@@ -1,7 +1,7 @@
 ---
 title: markdown语法
 categories:
-  - null
+  - 语法
 date: 2023-05-19 10:13:07
 tags:
 ---

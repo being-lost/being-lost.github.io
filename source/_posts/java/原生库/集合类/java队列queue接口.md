@@ -1,7 +1,9 @@
 ---
 title: java队列queue接口
 categories:
-  - null
+  - java
+  - 原生库
+  - 集合类
 date: 2023-05-19 11:24:35
 tags:
 ---

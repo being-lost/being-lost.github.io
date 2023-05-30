@@ -3,9 +3,7 @@ title: cmd、bat语法
 tags:
   - 语法
 categories:
-  - 编程
-  - 工具
-  - windows
+  - 语法
 date: 2023-02-21 19:03:00
 ---
 

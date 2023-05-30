@@ -4,8 +4,7 @@ tags:
   - sqlserver
   - 数据库
 categories:
-  - 编程
-  - 工具
+  - 数据库
   - sqlserver
 date: 2023-01-30 09:50:52
 ---

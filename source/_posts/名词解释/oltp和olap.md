@@ -1,7 +1,7 @@
 ---
 title: oltp和olap
 categories:
-  - null
+  - 名词解释
 date: 2023-05-22 15:11:56
 tags:
 ---

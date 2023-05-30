@@ -1,7 +1,9 @@
 ---
 title: try-with-resource自动关闭流
 categories:
-  - null
+  - java
+  - 基础
+  - 语法
 date: 2023-05-18 17:16:59
 tags:
 ---
