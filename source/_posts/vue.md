@@ -170,7 +170,7 @@ export default {
 </template>
 ```
 
-#### 列表渲染
+#### v-for，列表渲染
 
 通过form中的v-model双向绑带，来新增子项
 
@@ -213,6 +213,104 @@ export default {
       <button @click="removeTodo(todo)">X</button>
     </li>
   </ul>
+</template>
+```
+
+#### 监听器：watch:
+
+watch中以data中的key名作为方法名，
+
+可以监听这个值，当值变化时，就会调用同名的方法
+
+```vue
+<script>
+    export default {
+        data() {
+            return {
+                isHappy: true
+            }
+        },
+		watch:{
+            isHappy(){
+                console.log("happy")
+            }
+        }
+
+    }
+</script>
+
+<template>
+    <button @click="convert">switch mood</button>
+    <h1 v-if="isHappy">yes</h1>
+    <h1 v-else>no</h1> 
+</template>
+```
+
+#### 导入组件：components:
+
+先`import`，再在`components:`中注册，然后就能直接使用对应名称的标签`<ChildComp />`
+
+```vue
+<script>
+import ChildComp from './ChildComp.vue'
+
+export default {
+  components: {
+    ChildComp
+  }
+}
+</script>
+
+<template>
+  <ChildComp />
+</template>
+```
+
+##### 子组件可以设置自己的属性，并接收父组件的数据，prop:
+
+```js
+//在子组件中
+export default {
+  props: {
+    msg: String
+  }
+}
+
+//父组件import后，就能传递数据
+<ChildComp :msg="greeting" />
+```
+
+##### 子组件还能接收函数，emits:
+
+```js
+//子组件
+export default {
+    emits: ['response'],
+    created() {
+		//第一个参数为方法名，后面的是参数
+        this.$emit('response', 'hello world')
+    }
+}
+
+//父组件
+//这里的msg实际上就是上面的 hello world，然后赋值给父组件的childMsg
+<ChildComp @response="(msg) => childMsg = msg" />
+```
+
+##### 子组件还能接收dom，`<slot>`
+
+```vue
+//子组件
+<template>	
+	<slot>这里可以填一些默认值，父组件传值之后会覆盖默认值</slot>
+</template>
+
+//父组件
+<template>
+	//在子组件里面传什么都可以，都会将slot替换成这里的数据
+	<ChildComp>
+        <button @click="count++"></button>count: {{ count }}
+    </ChildComp>
 </template>
 ```
 
