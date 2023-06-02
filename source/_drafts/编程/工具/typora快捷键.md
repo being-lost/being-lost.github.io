@@ -53,8 +53,11 @@ Copy	Ctrl+C
     // for example: 
     // "Always on Top": "Ctrl+Shift+P"
     "Task List": "Ctrl+Shift+J",
-    "Code": "Ctrl+`",
-    "HighLight": "Ctrl+="
+	"Code": "Ctrl+`",
+	"Add Column After": "Alt+N",
+	"Delete Column": "Alt+M",
+	"HighLight": "Ctrl+=",
+	"Strike": "Ctrl+-"
 },
 ```
 

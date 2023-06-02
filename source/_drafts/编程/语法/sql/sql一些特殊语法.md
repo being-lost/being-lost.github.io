@@ -19,7 +19,7 @@ hello world
 
 拼接字符串，会自动转换类型
 
-> sqlserver-2012,mysql
+> sqlserver2012，mysql
 
 ```sql
 select concat(id,'-',name,'adfadsf') from user
@@ -188,7 +188,7 @@ from user
 
 
 
-##### cursor 游标
+##### cursor 游标（不推荐使用，性能差）
 
 相当于for循环
 
