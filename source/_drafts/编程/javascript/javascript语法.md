@@ -14,6 +14,10 @@ hello world
 
 ---
 
+[toc]
+
+
+
 ### 引入方式
 
 直接引入，可以放在head或者body中
@@ -98,27 +102,6 @@ const name = xxx;//常量
 一种非原始数据类型：
 
 - object 用于更复杂的数据结构。
-
-
-
-### 交互
-
-alter：出现一个弹窗，展示文本
-
-prompt：出现一个弹窗，给用户输入
-
-```js
-//用户如果不输入，默认值就是100
-let age = prompt('How old are you?', 100);
-
-alert(`You are ${age} years old!`); // You are 100 years old!
-```
-
-confirm：出现一个弹窗，让用户选择是、否
-
-```javascript
-let isBoss = confirm("Are you the boss?");
-```
 
 
 
@@ -370,6 +353,66 @@ MakeAdder add5 = new MakeAdder(5);
 add5.makeAdder(2); //7
 ```
 
+### 常用函数
+
+#### 交互
+
+alter：出现一个弹窗，展示文本
+
+prompt：出现一个弹窗，给用户输入
+
+```js
+//用户如果不输入，默认值就是100
+let age = prompt('How old are you?', 100);
+
+alert(`You are ${age} years old!`); // You are 100 years old!
+```
+
+confirm：出现一个弹窗，让用户选择是、否
+
+```javascript
+let isBoss = confirm("Are you the boss?");
+```
+
+#### 定时器
+
+##### setTimeout、clearTimeout
+
+延迟执行一个方法，只调用一次
+
+参数：
+
+- 方法名（记得不能带括号）
+- 延迟的毫秒数
+- 方法的参数（可多个）
+
+```js
+let sayHello = (name)=>console.log(`hello ${name}`);
+let timeId = setTimeout(sayHello,1000*3,"peter");
+//会返回一个id，可以取消这个方法的调度
+clearTimeout(timerId);
+```
+
+##### setInterval、clearInterval（不推荐）
+
+参数和上面一样，区别在于`setInterval`会**循环**调用
+
+##### 用setTimeout实现循环调用（推荐）
+
+```js
+let timeId = setTimeout(sayHello,1000*3)
+function sayHello(){
+    console.log("hello")
+    timeId=setTimeout(sayHello,1000*3);
+}
+```
+
+这样做和`setInterval`的区别在于，可以确定每次调用`sayHello`的时间间隔相同，
+
+因为`setInterval`是不会管`sayHello`方法执行需要多久，反正到点就执行一次，
+
+所以会可能上一次`sayHello`还没执行完，下一次又开始了。
+
 ### 对象
 
 ##### 基本语法
@@ -478,7 +521,7 @@ let user = {
 
 
 
-## 特殊点总结
+# 特殊点总结
 
 1. 变量类型为动态的，可随意切换
 
