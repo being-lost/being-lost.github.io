@@ -65,32 +65,46 @@ export default {
 
 ##### method和v-on:，绑定事件监听
 
-`v-on:`可以简写成 `@`
+`v-on:`可以简写成 `@`，还能直接在html里写函数
 
 ```vue
 //一个简单的计数器
 <script>
-export default {
-  data() {
-    return {
-      count: 0
+    export default {
+        data() {
+            return {
+                count: 0
+            }
+        },
+        methods: {
+            increment() {
+                this.count++
+            }
+        }
     }
-  },
-  methods: {
-    increment() {
-      this.count++
-    }
-  }
-}
 </script>
 
 <template>
-  <button v-on:click="increment">count is: {{ count }}</button>
-  <button @click="increment">count is: {{ count }}</button>
+<button v-on:click="increment">count is: {{ count }}</button>
+<button @click="increment">count is: {{ count }}</button>
+//还能省略method，直接写函数
+<button @click="count++">count is: {{ count }}</button>
 </template>
 ```
 
+还能阻止原始事件的执行，`@click.prevent`
+
+等同于在方法内加`event.preventDefault()`
+
+```vue
+<a href="https://vuejs.org" @click.prevent="sayHello">
+```
+
+
+
 #### 表单的双向绑定
+
+> 简单解释：input接收的数据，同步到text
 
 在`<input>`输入框中输入时，
 
@@ -172,7 +186,27 @@ export default {
 
 #### v-for，列表渲染
 
-通过form中的v-model双向绑带，来新增子项
+```vue
+<script>
+    export default {
+        data() {
+            return {
+                list: [1, 2, 3]
+            }
+        }
+    }
+</script>
+
+<template>
+<ul>
+    <li v-for="item of list">{{ item }}</li>
+</ul>
+</template>
+```
+
+##### 双向绑定
+
+通过form中的v-model双向绑定，来新增子项
 
 ```vue
 <script>

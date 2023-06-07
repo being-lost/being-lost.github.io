@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/总览.md",
+                "file": "_drafts/编程/语法/markdown语法.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "html",
+                "query": "markd",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/总览.md",
+                "file": "_drafts/编程/语法/markdown语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/总览.md",
+                "file": "_drafts/编程/语法/markdown语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/总览.md"
+                "file": "_drafts/编程/语法/markdown语法.md"
               }
             }
           }
@@ -146,15 +147,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "77e782562f5c570c",
+  "active": "4a115a2223bf1976",
   "lastOpenFiles": [
+    "_drafts/编程/工具/docker/docker.md",
+    "_drafts/编程/工具/docker/docker中安装vim.md",
+    "_drafts/编程/java/胶水代码.md",
+    "_drafts/html-canvas.md",
+    "_drafts/vue2练习一.md",
+    "_drafts/编程/vue/vue.md",
+    "_posts/总览.md",
     "_drafts/编程/数据库/sqlserver/sqlserver常用函数.md",
     "_drafts/sqlserver常用函数.md",
     "_drafts/编程/java/jdbc常用数据库url写法.md",
     "_drafts/jdbc常用数据库url写法.md",
     "_drafts/编程/java/第三方框架",
     "_drafts/编程/语法/cmd、bat语法.md",
-    "_posts/总览.md",
     "_drafts/编程/无法分类的报错/unable to verify the first certificate.md",
     "_drafts/编程",
     "_drafts/编程/vue",
@@ -167,7 +174,6 @@
     "_drafts/编程/java/第三方框架/springboot/springboot源码.md",
     "_drafts/编程/java/try-with-resource自动关闭流.md",
     "_posts/java/基础/语法/未命名.md",
-    "_drafts/编程/vue/vue.md",
     "_drafts/编程/工具/typora快捷键.md",
     "_drafts/编程/指南/编程语言学习指南.md",
     "_drafts/编程/java/java-BigDecimal.md",
@@ -178,11 +184,6 @@
     "_posts/java/原生库/net包",
     "_posts/java/原生库/新建文件夹",
     "_drafts/编程/工具/git/git命令.md",
-    "_drafts/编程/计算机网络/github访问加速.md",
-    "_drafts/编程/java/java队列queue接口.md",
-    "_drafts/编程/java/java-socket.md",
-    "_posts/dns.md",
-    "_drafts/编程/语法/markdown语法.md",
-    "_drafts/test-hexo.md"
+    "_drafts/编程/计算机网络/github访问加速.md"
   ]
 }
