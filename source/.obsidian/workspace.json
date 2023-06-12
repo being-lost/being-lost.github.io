@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "90c41a46734b678b",
+        "id": "1de19b5924db6c14",
         "type": "tabs",
         "children": [
           {
-            "id": "4a115a2223bf1976",
+            "id": "39eeb7e8cdc5a146",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/编程/语法/markdown语法.md",
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "markd",
+                "query": "springboot",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/编程/语法/markdown语法.md",
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/编程/语法/markdown语法.md",
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/编程/语法/markdown语法.md"
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md"
               }
             }
           }
@@ -147,43 +146,42 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4a115a2223bf1976",
+  "active": "39eeb7e8cdc5a146",
   "lastOpenFiles": [
+    "_drafts/编程/跟着教程学/vue.md",
+    "_drafts/编程/跟着教程学/现代javascript教程.md",
+    "_drafts/编程/总结",
+    "_drafts/编程/跟着教程学",
+    "_drafts/百度云下载加速.md",
+    "_drafts/其他/生活感悟/2022生日记录.md",
+    "_drafts/其他/脑图.md",
+    "_drafts/其他/需求池.md",
+    "_drafts/管理系统/代码片段.md",
+    "_drafts/分布式事务.md",
+    "_drafts/现代javascript教程.md",
+    "_drafts/其他/生活感悟/第六感.md",
+    "_drafts/其他/生活感悟/活在当下.md",
+    "_drafts/其他/生活感悟/关于上瘾这件事.md",
+    "_drafts/管理系统/随手记录.md",
+    "_drafts/编程/总结/java/javaSE基础.md",
+    "_drafts/编程/总结/java/java-socket.md",
+    "_drafts/编程/语法/markdown语法.md",
+    "_drafts/用join还是分解关联查询.md",
     "_drafts/编程/工具/docker/docker.md",
     "_drafts/编程/工具/docker/docker中安装vim.md",
-    "_drafts/编程/java/胶水代码.md",
+    "_drafts/编程/总结/java/胶水代码.md",
     "_drafts/html-canvas.md",
     "_drafts/vue2练习一.md",
-    "_drafts/编程/vue/vue.md",
     "_posts/总览.md",
     "_drafts/编程/数据库/sqlserver/sqlserver常用函数.md",
     "_drafts/sqlserver常用函数.md",
-    "_drafts/编程/java/jdbc常用数据库url写法.md",
-    "_drafts/jdbc常用数据库url写法.md",
-    "_drafts/编程/java/第三方框架",
-    "_drafts/编程/语法/cmd、bat语法.md",
-    "_drafts/编程/无法分类的报错/unable to verify the first certificate.md",
+    "_drafts/编程/总结/java/第三方框架",
     "_drafts/编程",
     "_drafts/编程/vue",
     "_drafts/编程/语法/sql",
     "_drafts/编程/无法分类的报错",
-    "_drafts/编程/计算机网络/ddns动态域名解析.md",
-    "_drafts/长期/java常用库.md",
     "_drafts/编程/数据库/mysql",
-    "_drafts/编程/java/java-swagger.md",
-    "_drafts/编程/java/第三方框架/springboot/springboot源码.md",
-    "_drafts/编程/java/try-with-resource自动关闭流.md",
-    "_posts/java/基础/语法/未命名.md",
-    "_drafts/编程/工具/typora快捷键.md",
-    "_drafts/编程/指南/编程语言学习指南.md",
-    "_drafts/编程/java/java-BigDecimal.md",
-    "_drafts/编程/计算机网络/访问网站加速的几种方式.md",
     "_posts/java/基础/语法",
-    "_posts/java/基础/新建文件夹",
-    "_posts/java/基础/try-with-resource自动关闭流.md",
-    "_posts/java/原生库/net包",
-    "_posts/java/原生库/新建文件夹",
-    "_drafts/编程/工具/git/git命令.md",
-    "_drafts/编程/计算机网络/github访问加速.md"
+    "_posts/java/基础/新建文件夹"
   ]
 }
