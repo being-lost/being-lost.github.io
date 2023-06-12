@@ -138,18 +138,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "39eeb7e8cdc5a146",
   "lastOpenFiles": [
-    "_drafts/编程/跟着教程学/vue.md",
+    "_drafts/编程/跟着教程学习/javascript现代教程.md",
+    "_drafts/编程/跟着教程学习/现代javascript教程.md",
     "_drafts/编程/跟着教程学/现代javascript教程.md",
+    "_posts/草稿.md",
+    "_drafts/编程/跟着教程学/vue.md",
     "_drafts/编程/总结",
     "_drafts/编程/跟着教程学",
     "_drafts/百度云下载加速.md",
@@ -173,8 +176,6 @@
     "_drafts/html-canvas.md",
     "_drafts/vue2练习一.md",
     "_posts/总览.md",
-    "_drafts/编程/数据库/sqlserver/sqlserver常用函数.md",
-    "_drafts/sqlserver常用函数.md",
     "_drafts/编程/总结/java/第三方框架",
     "_drafts/编程",
     "_drafts/编程/vue",
