@@ -29,7 +29,7 @@ hello world
   BigDecimal ten = BigDecimal.valueOf(10);
   BigDecimal three = BigDecimal.valueOf(3);
   //除不尽，会报错：ArithmeticException: Non-terminating decimal expansion
-  ten.divide(three);
+  ten.divide(three);//3.333333333..
   //保留2位小数，四舍5入
   ten.divide(three, 2, 5);//3.33
   ten.divide(three, 3, 2);//3.334

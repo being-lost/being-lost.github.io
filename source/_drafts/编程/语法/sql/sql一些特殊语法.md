@@ -35,6 +35,24 @@ select concat(id,'-',name,'adfadsf') from user
 select cast(age as varchar) from user
 ```
 
+##### format()
+
+格式化输出
+
+> sqlserver2012
+
+```sql
+format ( getdate(), 'yyyy-MM-dd HH:mm:ss' ) --2023-06-13 00:00:00
+```
+
+> 低版本的sqlserver，比如2008R2不支持，可以用convert加字符串拼接来格式化日期
+
+```sql
+convert(varchar(19),getdate(),25) --2023-06-13 00:00:00
+--还能限制字段的长度，然后拼接字符串
+convert(varchar(17),getdate(),25)+'15' --2023-06-13 00:00:15
+```
+
 
 
 ##### case when

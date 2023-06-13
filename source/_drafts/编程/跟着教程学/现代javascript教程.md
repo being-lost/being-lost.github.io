@@ -67,6 +67,7 @@ hello world
     // js的属性不仅可以赋值，还能增删，就跟map一样
     user.isAdmin = true; // 加一个属性
     delete user.age; // 删掉一个属性
+    ```
 ```
 
 - [x] key包含空格
@@ -80,7 +81,7 @@ hello world
   user["likes birds"] = true;		
   alert(user["likes birds"]); 
   delete user["likes birds"];
-  ```
+```
 
 - [x] 结尾加逗号`,`
 	```js
@@ -326,28 +327,275 @@ hello world
 
 > todo：不懂它到底有什么用
 
-- [ ] 可以生成唯一标识
+- [x] 可以生成唯一标识
 
+  不会被自动转为字符串
+  
   ```js
   let id1 = Symbol("id")
   let id2 = Symbol("id")
   console.log(id1===id2); // false 说明是唯一的
-  console.log(id1.description); // id 里面的为描述信息
+  console.log(id1.description); // id 里面的为描述信息，也可以不填
+```
   
+- [x] 可以作为隐藏属性
+
+  js规定，对象属性的key，只允许是string和symbol，其他类型会自动转成string
+
+  ```js
+  let user = {
+      Symbol("id"):1, //这样会报错
+      name :"hello"
+  }
   ```
 
+  正确示范
+
+  ```js
+  let id = Symbol("id");
+  let user = { 
+      name: "John",
+  	[id]:1,		//需要配合[]
+  };
+  console.log( user[id] ); // 1
+  console.log(JSON.stringify(user)) // 但是并不会打印出id
+  ```
+
+- [x] 在`for…in`中会被跳过
+
+  但是`Object.assign` 可以拷贝symbol 属性
+
+- [x] 全局symbol，可以在全局设置一个唯一标识
+
+  ```js
+  // 从全局中找symbol，没有就会创建一个
+  let sym = Symbol.for("name");
+  let sym2 = Symbol.for("id");
   
+  // 通过 symbol 获取description
+  console.log( Symbol.keyFor(sym) ); // name
+  console.log( Symbol.keyFor(sym2) ); // id
+  
+  //验证全局唯一性
+  let sym3 = Symbol.for("id");
+  console.log(sym2===sym3);
+  ```
 
   
 #### 对象 —— 原始值转换
 
+> todo：不明所以，跳过
+
 ### 数据类型
 
+这一章主要是一些api的使用
+
 #### 原始类型的方法
+
+- [x] js中也和java一样，基础数据类型都有各自的包装类**对象**，
+
+  并且比java更灵活，基础数据类型可以直接调用包装类的方法
+
+  包装的过程由引擎高度优化，并且自动调用，调用完包装对象就会被销毁
+
+- [x] 包装类的首字母都是大写的，基础类型都是小写的
+
 #### 数字类型
+
+- [ ] 普通的数字类型可以支持`-9000兆~9000兆`，完全够用
+
+  实在不够用，才会选择用BigInt
+
+- [ ] 数字表示的语法糖
+
+  几个0
+
+  ```js
+  //下面这三个都是一样的
+  let billion = 1000000000;
+  let billion = 1_000_000_000;
+  let billion = 1e9; //e表示后面有几个0
+  let num = 1e-3; //负号表示前面有几个0，这里是0.001
+  ```
+
+  不同进制
+
+  ```js
+  // 都是255
+  let a = 0b11111111; // 0b：2进制
+  let b = 0o377; // 0o：8进制
+  let c = 0xff; // 0x：16进制
+  
+  //进制转换
+  let num = 255;
+  
+  alert( num.toString(16) );  // 转为16进制：ff
+  alert( num.toString(2) );   // 转为2进制：11111111
+  ```
+
+  一些处理小数的方法
+
+  | 原始值 | Math.floor（向下舍入） | Math.ceil （向上舍入） | Math.round（四舍五入） | Math.trunc（去掉小数） |
+  | ------ | ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+  | 3.1    | 3                      | 4                      | 3                      | 3                      |
+  | 3.6    | 3                      | 4                      | 4                      | 3                      |
+  | -1.1   | -2                     | -1                     | -1                     | -1                     |
+  | -1.6   | -2                     | -1                     | -2                     | -1                     |
+
+- [ ] > todo：还有其他的方法，暂时用不上就不管了
+
+
+
 #### 字符串
+
+> todo：暂时跳过
+
 #### 数组
+
+- [x] 声明
+
+  ```js
+  let arr = new Array();
+  let arr = [];
+  let arr = [1,2,true,"hello",{name:"zhangsan"},function(){}]; //可以存任何类型
+  //只能说非常的随意了
+  arr[4].name
+  arr[5]()
+  ```
+
+- [x] js的数组甚至可以直接使用**队列**和**栈**的方法
+
+  ```js
+  let arr = [1,2,3,4]
+  arr.pop()	//移除最后一个，4
+  arr.push(4)	//在末尾添加4
+  
+  //这两个方法少用，因为会触发数组拷贝
+  arr.shift()	//移除第一个，1
+  arr.unshift(1)	//在前面添加1
+  
+  //可以添加多个
+  arr.push(5,6)	
+  arr.unshift(-1,0)
+  ```
+
+- [x] 遍历数组，普通的for循环就不演示了
+
+  但是，听说在js里，普通for比下面这种更快？？
+
+  ```js
+  //和java略有不同
+  for (let fruit of fruits) {
+    alert( fruit );
+  }
+  ```
+
+- [x] length长度，比java灵活多了，普通的数组就相当于arrayList
+
+  而且length可以自由设置
+
+  ```js
+  let arr = [1, 2, 3, 4, 5];
+  
+  arr.length = 2; // 截断到只剩 2 个元素
+  alert( arr ); // [1, 2]
+  
+  arr.length = 5; 
+  alert( arr[3] ); // undefined：被截断的那些数值并没有回来
+  
+  arr.length = 0; //清空数组
+  ```
+
+  不会下标越界
+
+  ```js
+  let fruits = [];
+  fruits[123] = "Apple";
+  
+  alert( fruits.length ); // 124
+  ```
+
+- [x] 数组比较不要用 ` ==`
+
 #### 数组方法
+
+- [ ] splice：删除、替换、添加元素
+
+  ```js
+  let arr = [1,2,3,4,5]
+  
+  delete arr[2];	//只是把2下标变为undefined，但是不改变数组长度
+  
+  //从哪个下标开始，把多少个元素，替换成哪些元素
+  //删除
+  arr.splice(2,1)	//1，2，4，5
+  arr.splice(2,1)	//1，2，5
+  //添加
+  arr.splice(2,0,4) //1,2,4,5
+  arr.splice(2,0,3) //1,2,3,4,5
+  //替换
+  arr.splice(2,2,7,8,9) //1,2,7,8,9,5
+  arr.splice(2,3,3,4) //1,2,3,4,5
+  //其实下标还能用负数，-1就是最后一位
+  arr.splice(-1,0,6,7) //1,2,3,4,5,6,7
+  //会返回移除掉的子数组
+  let delArr = arr.splice(5,2) //1,2,3,4,5
+  console.log( delArr ) //6,7
+  ```
+
+- [x] slice，跟上面比少了一个p。用来截取子数组
+
+  ```js
+  let arr = [1,2,3,4,5]
+  //从哪个下标，到哪个下标（不包括这个下标）
+  console.log( arr.slice(2)) //3,4,5 不填就默认到结尾
+  console.log( arr.slice(2,3)) //3
+  ```
+
+- [x] concat，相当于java的`addAll()`
+
+  ```js
+  let arr = [1, 2];
+  
+  // 从 arr 和 [3,4] 创建一个新数组
+  alert( arr.concat([3, 4]) ); // 1,2,3,4
+  
+  // 从 arr、[3,4] 和 [5,6] 创建一个新数组
+  alert( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+  
+  // 从 arr、[3,4]、5 和 6 创建一个新数组
+  alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
+  ```
+
+- [x] forEach，还是比java更灵活一点
+
+  ```js
+  let arr = ["Bilbo", "Gandalf", "Nazgul"]
+  // 对每个元素调用 alert
+  arr.forEach(console.log);
+  
+  //可以传入更多参数
+  arr.forEach((item, index, array) => {
+  	console.log(`${item} is at index ${index} in ${array}`);
+  });
+  ```
+
+- [ ] `arr.indexOf(item, from)` ： 从索引 from 开始搜索 item，如果找到则返回索引，否则返回 -1。
+
+  `arr.lastIndexOf(item, from)` ：同上，但是是从后往前找
+
+  `arr.includes(item, from)` ：从索引 from 开始搜索 item，如果找到则返回 true，没有就false
+
+  判断是否存在，最好用`includes`，它可以正确判断`NaN`
+
+  ```js
+  const arr = [NaN];
+  alert( arr.indexOf(NaN) ); // -1（错，应该为 0）
+  alert( arr.includes(NaN) );// true（正确）
+  ```
+
+  
+
 #### Iterable object（可迭代对象）
 #### Map and Set（映射和集合）
 #### WeakMap and WeakSet（弱映射和弱集合）
