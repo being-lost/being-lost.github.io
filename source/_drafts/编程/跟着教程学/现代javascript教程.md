@@ -336,6 +336,7 @@ hello world
   let id2 = Symbol("id")
   console.log(id1===id2); // false 说明是唯一的
   console.log(id1.description); // id 里面的为描述信息，也可以不填
+  ```
 ```
   
 - [x] 可以作为隐藏属性
@@ -347,7 +348,7 @@ hello world
       Symbol("id"):1, //这样会报错
       name :"hello"
   }
-  ```
+```
 
   正确示范
 
@@ -580,7 +581,7 @@ hello world
   });
   ```
 
-- [ ] `arr.indexOf(item, from)` ： 从索引 from 开始搜索 item，如果找到则返回索引，否则返回 -1。
+- [x] `arr.indexOf(item, from)` ： 从索引 from 开始搜索 item，如果找到则返回索引，否则返回 -1。
 
   `arr.lastIndexOf(item, from)` ：同上，但是是从后往前找
 
@@ -589,12 +590,116 @@ hello world
   判断是否存在，最好用`includes`，它可以正确判断`NaN`
 
   ```js
-  const arr = [NaN];
-  alert( arr.indexOf(NaN) ); // -1（错，应该为 0）
+  const arr = [0,NaN];
+  alert( arr.indexOf(NaN) ); // -1（实际上是存在的）
   alert( arr.includes(NaN) );// true（正确）
   ```
 
+- [x] `find`、`findIndex`、`findLastIndex`
+
+  比java的stream好用多了
+
+  ```js
+  let users = [
+      {id: 1, name: "John"},
+      {id: 2, name: "Pete"},
+      {id: 3, name: "Mary"}
+  ];
   
+  let user = users.find(item => item.id == 1); //从前往后找，找到就停止，返回对象
+  let index = users.findIndex(item => item.id == 1); //从前往后找，返回下标 0
+  let lastIndex = users.findLastIndex(item => item.id == 1); //从后往前，返回下标 2（下标也反着来）
+  ```
+
+- [x] `filter`，和`find`一样，但是返回的是符合条件的数组
+
+  ```js
+  let users = [
+    {id: 1, name: "John"},
+    {id: 2, name: "Pete"},
+    {id: 3, name: "Mary"}
+  ];
+  
+  // 返回前两个用户的数组
+  let subUsers = users.filter(item => item.id < 3);
+  alert(subUsers.length); // 2
+  ```
+
+- [x] `map`，跟java里stream的一样
+
+  ```js
+  let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+  alert(lengths); // 5,7,6
+  ```
+
+- [ ] `sort`，排序
+
+  最好自己实现比较的函数
+
+  ```js
+  let arr = [ 1, 2, 15 ];
+  
+  arr.sort(); // 1, 15, 2 实际结果是错的，因为内部都被转换成字符串比较。15的第一位1比2小，所以排在前面
+  // 函数的结果：正数》，负数《，0=
+  arr.sort(function(a, b) {
+      return a - b; 
+  });
+  arr.sort( (a, b) => a - b ); // 简写
+  ```
+
+- [ ] `reverse`，颠倒数组顺序
+
+  ```js
+  let arr = [1, 2, 3, 4, 5];
+  arr.reverse(); // 5，4，3，2，1 颠倒的是原数组 
+  ```
+
+- [ ] `split`，跟java差不多
+
+  `join`，则是跟`split`刚好相反
+
+  ```js
+  let str = '1,2,3,4'
+  
+  let arr1 = str.split(',') // [1,2,3,4] 
+  
+  let arr2 = str.split(',', 2 ) // [1,2] 2表示数组的长度
+  
+  let str1 = arr1.join(':') // 1:2:3:4 返回字符串
+  ```
+
+  `split`还能拆单词
+
+  ```js
+  let arr = 'hello'.split('') // [h,e,l,l,o]
+  ```
+
+- [ ] `reduce`，遍历数组，并且保留上次函数执行的结果，传递给下一个元素
+
+  ```js
+  let value = arr.reduce(function(accumulator, item, index, array) {
+    // ...
+  }, [initial]);
+  ```
+
+  使用介绍：
+
+  - `accumulator` —— 是上一个函数调用的结果。第一次等于 `initial`，如果`initial`没传，就跳过第一个下标，并且把第一个下标的值，赋值给`accumulator`
+
+    ```js
+    //没有初始值，所以a的初始值就是第一个下标的值，并且从第二个下标开始运算
+    let value = [1,2].reduce((a,b) => a+b); //3
+    
+    let value = [1,2].reduce((a,b) => a+b,1); //4
+    ```
+
+  - `item` —— 当前的数组元素。
+
+  - `index` —— 当前索引。
+
+  - `arr` —— 数组本身。
+
+- [ ] `Array.isArray()`判断是否为数组
 
 #### Iterable object（可迭代对象）
 #### Map and Set（映射和集合）
