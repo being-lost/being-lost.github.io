@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/编程/总结/java/java-BigDecimal.md",
+                "file": "_drafts/编程/总结/java/java队列queue接口.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Bigdecimal",
+                "query": "queue",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/编程/总结/java/java-BigDecimal.md",
+                "file": "_drafts/编程/总结/java/java队列queue接口.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/编程/总结/java/java-BigDecimal.md",
+                "file": "_drafts/编程/总结/java/java队列queue接口.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/编程/总结/java/java-BigDecimal.md"
+                "file": "_drafts/编程/总结/java/java队列queue接口.md"
               }
             }
           }
@@ -138,20 +139,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "77e782562f5c570c",
+  "active": "39eeb7e8cdc5a146",
   "lastOpenFiles": [
+    "_drafts/编程/总结/java/javaSE基础.md",
+    "_drafts/编程/总结/java/java队列queue接口.md",
+    "_drafts/编程/总结/java/java-BigDecimal.md",
+    "吐槽.md",
+    "动起来.md",
+    "作战方针/总章.md",
+    "作战方针",
+    "_posts/草稿.md",
+    "_posts/小说.md",
     "_drafts/编程/跟着教程学/现代javascript教程.md",
     "_drafts/编程/跟着教程学习/javascript现代教程.md",
     "_drafts/编程/跟着教程学习/现代javascript教程.md",
-    "_posts/草稿.md",
     "_drafts/编程/跟着教程学/vue.md",
     "_drafts/编程/总结",
     "_drafts/编程/跟着教程学",
@@ -166,23 +175,15 @@
     "_drafts/其他/生活感悟/活在当下.md",
     "_drafts/其他/生活感悟/关于上瘾这件事.md",
     "_drafts/管理系统/随手记录.md",
-    "_drafts/编程/总结/java/javaSE基础.md",
     "_drafts/编程/总结/java/java-socket.md",
     "_drafts/编程/语法/markdown语法.md",
     "_drafts/用join还是分解关联查询.md",
-    "_drafts/编程/工具/docker/docker.md",
-    "_drafts/编程/工具/docker/docker中安装vim.md",
-    "_drafts/编程/总结/java/胶水代码.md",
-    "_drafts/html-canvas.md",
-    "_drafts/vue2练习一.md",
-    "_posts/总览.md",
     "_drafts/编程/总结/java/第三方框架",
     "_drafts/编程",
     "_drafts/编程/vue",
     "_drafts/编程/语法/sql",
     "_drafts/编程/无法分类的报错",
     "_drafts/编程/数据库/mysql",
-    "_posts/java/基础/语法",
-    "_posts/java/基础/新建文件夹"
+    "_posts/java/基础/语法"
   ]
 }
