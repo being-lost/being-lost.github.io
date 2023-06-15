@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/编程/总结/java/java队列queue接口.md",
+                "file": "_drafts/编程/总结/java/javaSE基础.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "queue",
+                "query": "打包",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/编程/总结/java/java队列queue接口.md",
+                "file": "_drafts/编程/总结/java/javaSE基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/编程/总结/java/java队列queue接口.md",
+                "file": "_drafts/编程/总结/java/javaSE基础.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/编程/总结/java/java队列queue接口.md"
+                "file": "_drafts/编程/总结/java/javaSE基础.md"
               }
             }
           }
@@ -147,10 +147,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "39eeb7e8cdc5a146",
+  "active": "ac8d89168f4bb25e",
   "lastOpenFiles": [
-    "_drafts/编程/总结/java/javaSE基础.md",
     "_drafts/编程/总结/java/java队列queue接口.md",
+    "_drafts/编程/总结/java/javaSE基础.md",
     "_drafts/编程/总结/java/java-BigDecimal.md",
     "吐槽.md",
     "动起来.md",
