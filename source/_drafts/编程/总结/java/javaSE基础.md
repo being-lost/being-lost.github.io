@@ -85,6 +85,9 @@ float b = a;
   //int[128,255]，对应byte[-128,-1]
   int a = 255;
   byte b = (byte)a; //-1
+  
+  //int和byte之间的转换
+  int a = b >= 0 ? b : b + 256; //小于0的byte，需要加256
   ```
 
 #### 特殊类型
