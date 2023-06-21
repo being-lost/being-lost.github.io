@@ -338,8 +338,10 @@ todo
 - workQueue：一个用来存放任务的队列
 - threadFactory：使用工厂模式创建线程
 - handler：（线程饱和策略）队列满了，线程池也满了，但是还有任务进来，怎么办
-  - AbortPolicy：直接拒绝，然后报错
-  - CallerRunsPolicy
+  - AbortPolicy：丢弃任务，并抛出RejectedExecutionException异常。
+  - DiscardPolicy：丢弃任务，但是不抛出异常。
+  - DiscardOldestPolicy：丢弃队列最前面的任务，然后重新提交被拒绝的任务。
+  - CallerRunsPolicy：由调用线程处理该任务。
 
 ##### 处理问题的流程
 
