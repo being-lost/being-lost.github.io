@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/编程/总结/java/java测试mock.md",
+                "file": "_drafts/编程/指南/编程语言学习指南.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mock",
+                "query": "打包",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/编程/总结/java/java测试mock.md",
+                "file": "_drafts/编程/指南/编程语言学习指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/编程/总结/java/java测试mock.md",
+                "file": "_drafts/编程/指南/编程语言学习指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/编程/总结/java/java测试mock.md"
+                "file": "_drafts/编程/指南/编程语言学习指南.md"
               }
             }
           }
@@ -149,9 +149,17 @@
   },
   "active": "39eeb7e8cdc5a146",
   "lastOpenFiles": [
+    "_drafts/bat后台运行、关闭jar.md",
+    "_drafts/编程/总结/java/第三方框架/springboot/springboot启动报错.md",
+    "_drafts/管理系统/随手记录.md",
     "_drafts/编程/总结/java/javaSE基础.md",
-    "_drafts/编程/总结/java/java队列queue接口.md",
+    "_drafts/编程/语法/sql/sql常规语法.md",
+    "_drafts/编程/总结/java/java-socket.md",
+    "_drafts/编程/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
+    "_drafts/编程/语法/sql/sql一些特殊语法.md",
     "_drafts/编程/总结/java/java-BigDecimal.md",
+    "_drafts/编程/总结/java/java测试mock.md",
+    "_drafts/编程/总结/java/java队列queue接口.md",
     "吐槽.md",
     "动起来.md",
     "作战方针/总章.md",
@@ -170,14 +178,6 @@
     "_drafts/其他/需求池.md",
     "_drafts/管理系统/代码片段.md",
     "_drafts/分布式事务.md",
-    "_drafts/现代javascript教程.md",
-    "_drafts/其他/生活感悟/第六感.md",
-    "_drafts/其他/生活感悟/活在当下.md",
-    "_drafts/其他/生活感悟/关于上瘾这件事.md",
-    "_drafts/管理系统/随手记录.md",
-    "_drafts/编程/总结/java/java-socket.md",
-    "_drafts/编程/语法/markdown语法.md",
-    "_drafts/用join还是分解关联查询.md",
     "_drafts/编程/总结/java/第三方框架",
     "_drafts/编程",
     "_drafts/编程/vue",
