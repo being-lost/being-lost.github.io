@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/编程/指南/编程语言学习指南.md",
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "打包",
+                "query": "splice",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/编程/指南/编程语言学习指南.md",
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/编程/指南/编程语言学习指南.md",
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/编程/指南/编程语言学习指南.md"
+                "file": "_drafts/编程/跟着教程学/现代javascript教程.md"
               }
             }
           }
@@ -139,27 +139,27 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "39eeb7e8cdc5a146",
+  "active": "ac8d89168f4bb25e",
   "lastOpenFiles": [
-    "_drafts/bat后台运行、关闭jar.md",
-    "_drafts/编程/总结/java/第三方框架/springboot/springboot启动报错.md",
-    "_drafts/管理系统/随手记录.md",
-    "_drafts/编程/总结/java/javaSE基础.md",
-    "_drafts/编程/语法/sql/sql常规语法.md",
-    "_drafts/编程/总结/java/java-socket.md",
-    "_drafts/编程/数据库/sqlserver/sqlserver设置、添加、修改自增字段.md",
-    "_drafts/编程/语法/sql/sql一些特殊语法.md",
-    "_drafts/编程/总结/java/java-BigDecimal.md",
-    "_drafts/编程/总结/java/java测试mock.md",
+    "vue3通用搭建流程.md",
+    "前端开发流程.md",
+    "台式-笔记本网络共享设置.md",
     "_drafts/编程/总结/java/java队列queue接口.md",
+    "javascript游戏开发.md",
+    "idea设置.md",
+    "_drafts/java-io流.md",
+    "_drafts/bat后台运行、关闭jar.md",
+    "_drafts/编程/总结/java/javaSE基础.md~",
+    "_drafts/编程/总结/java/javaSE基础.md",
+    "_drafts/编程/总结/java/java-BigDecimal.md",
     "吐槽.md",
     "动起来.md",
     "作战方针/总章.md",
@@ -178,12 +178,12 @@
     "_drafts/其他/需求池.md",
     "_drafts/管理系统/代码片段.md",
     "_drafts/分布式事务.md",
+    "_drafts/现代javascript教程.md",
     "_drafts/编程/总结/java/第三方框架",
     "_drafts/编程",
     "_drafts/编程/vue",
     "_drafts/编程/语法/sql",
     "_drafts/编程/无法分类的报错",
-    "_drafts/编程/数据库/mysql",
-    "_posts/java/基础/语法"
+    "_drafts/编程/数据库/mysql"
   ]
 }
