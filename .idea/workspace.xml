@@ -25,13 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5345fd3-810c-40b4-ab01-ea1f1567e96a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_drafts/java-file.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_drafts/代码库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/.obsidian/workspace.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_drafts/编程/指南/编程语言学习指南.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_drafts/编程/指南/编程语言学习指南.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/吐槽.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/吐槽.md" afterDir="false" />
-    </list>
+    <list default="true" id="a5345fd3-810c-40b4-ab01-ea1f1567e96a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +75,7 @@
       <workItem from="1684310429681" duration="814000" />
       <workItem from="1686578285798" duration="429000" />
       <workItem from="1687773169263" duration="62000" />
+      <workItem from="1687773286811" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1686578655174</created>
@@ -89,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686578655174</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1">
+      <created>1687773420948</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687773420948</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="277" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1686576652334">
@@ -132,6 +135,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1686576618127" />
+    <state x="595" y="280" key="MultipleFileMergeDialog" timestamp="1687773304531">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="595" y="280" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1687773304531" />
+    <state x="731" y="221" key="RollbackChangesDialog" timestamp="1687773401675">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1687773401675" />
     <state x="552" y="239" key="Vcs.Push.Dialog.v2" timestamp="1686578659858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
