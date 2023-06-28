@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/编程/总结/java/jdbc常用数据库url写法.md",
+                "file": "_drafts/编程/总结/java/javaSE基础.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mysql",
+                "query": "putif",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/编程/总结/java/jdbc常用数据库url写法.md",
+                "file": "_drafts/编程/总结/java/javaSE基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/编程/总结/java/jdbc常用数据库url写法.md",
+                "file": "_drafts/编程/总结/java/javaSE基础.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/编程/总结/java/jdbc常用数据库url写法.md"
+                "file": "_drafts/编程/总结/java/javaSE基础.md"
               }
             }
           }
@@ -149,9 +149,12 @@
   },
   "active": "39eeb7e8cdc5a146",
   "lastOpenFiles": [
-    "吐槽.md",
-    "_drafts/代码库.md",
     "_drafts/编程/总结/java/胶水代码.md",
+    "_drafts/编程/工具/typora快捷键.md",
+    "_drafts/编程/语法/markdown语法.md",
+    "_drafts/代码库.md",
+    "_drafts/编程/总结/java/jdbc常用数据库url写法.md",
+    "吐槽.md",
     "_drafts/java-file.md",
     "_drafts/编程/总结/java/javaSE基础.md",
     "_drafts/编程/指南/编程语言学习指南.md",
@@ -173,11 +176,8 @@
     "_drafts/编程/跟着教程学/现代javascript教程.md",
     "_drafts/编程/跟着教程学习/javascript现代教程.md",
     "_drafts/编程/跟着教程学习/现代javascript教程.md",
-    "_drafts/编程/跟着教程学/vue.md",
     "_drafts/编程/总结",
     "_drafts/编程/跟着教程学",
-    "_drafts/百度云下载加速.md",
-    "_drafts/其他/生活感悟/2022生日记录.md",
     "_drafts/编程/总结/java/第三方框架",
     "_drafts/编程",
     "_drafts/编程/vue",
