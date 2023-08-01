@@ -44,3 +44,27 @@ public void test(InputStream inputStream){
 }
 ```
 
+### 关闭顺序
+
+close => catch => finally
+
+```java
+public static void main(String[] args) {
+    try(TestCloseable test = new TestCloseable()) {
+        throw new RuntimeException("throw Exception");
+    } catch (Exception e) {
+        System.out.println("2");
+    }
+    finally {
+        System.out.println("3");
+    }
+}
+
+public static class TestCloseable implements Closeable {
+    @Override
+    public void close() throws IOException {
+        System.out.println("1");
+    }
+}
+```
+
